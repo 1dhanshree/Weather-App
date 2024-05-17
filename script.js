@@ -2,7 +2,11 @@ async function fetchWeather(){
     let searchInput = document.getElementById('search').value;
     const weatherDataSection = document.getElementById('weather-data');
     weatherDataSection.style.display = 'block';
-    const apiKey = "fe534b50809dfcc21bc71abcd4ec0065"
+    // index.js
+    const config = require('./config');
+    // Now you can access your API key like this
+    const apiKey = config.apiKey;
+
 
     if(searchInput == ''){
         weatherDataSection.innerHTML = `
